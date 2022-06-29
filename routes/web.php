@@ -19,4 +19,3 @@ Route::get('/', function () {
 
 // tes
 // tes lagi
-// aku ian
