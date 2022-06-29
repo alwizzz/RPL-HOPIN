@@ -20,6 +20,7 @@ Route::get('/', function () {
     return view('index');
 });
 
+//tes
 
 Route::resource('/quest', QuestController::class);
 Route::resource('/laporan', LaporanController::class);
