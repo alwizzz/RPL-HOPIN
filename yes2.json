@@ -1,0 +1,82 @@
+{
+    "operation": "Multitape",
+    "type": "MTP", 
+    "tapeCount": 3,
+    "symbols": ["0","1","+","-","#","X"],
+    "blankSymbol": "B",
+    "startState": "Q0",
+    "acceptStates": ["ACC"],
+    "states": [
+        {
+            "name": "Q0",
+            "transitions": [
+                {
+                    "read": ["0","B","B"],
+                    "write": ["B","0","B"],
+                    "direction": ["R","R","S"],
+                    "nextState": "Q0"
+                },
+                {
+                    "read": ["1","B","B"],
+                    "write": ["B","B","B"],
+                    "direction": ["R","S","S"],
+                    "nextState": "Q1"
+                }
+            ]
+        },
+        {
+            "name": "Q1",
+            "transitions": [
+                {
+                    "read": ["0","B","B"],
+                    "write": ["B","0","B"],
+                    "direction": ["S","L","S"],
+                    "nextState": "Q2"
+                },
+                {
+                    "read": ["B","B","B"],
+                    "write": ["B","B","B"],
+                    "direction": ["S","S","S"],
+                    "nextState": "Q4"
+                }
+            ]
+        },
+        {
+            "name": "Q2",
+            "transitions": [
+                {
+                    "read": ["0","0","B"],
+                    "write": ["0","0","B"],
+                    "direction": ["S","R","S"],
+                    "nextState": "Q3"
+                },
+                {
+                    "read": ["0","B","B"],
+                    "write": ["0","B","B"],
+                    "direction": ["S","R","R"],
+                    "nextState": "Q3"
+                }
+              
+            ]
+        },     
+        {
+            "name": "Q3",
+            "transitions": [
+                {
+                    "read": ["0","0","B"],
+                    "write": ["0","0","0"],
+                    "direction": ["S","R","R"],
+                    "nextState": "Q3"
+                },
+                {
+                    "read": ["0","B","B"],
+                    "write": ["B","B","B"],
+                    "direction": ["R","S","S"],
+                    "nextState": "Q1"
+                }
+              
+            ]
+        }
+        
+    ]
+}

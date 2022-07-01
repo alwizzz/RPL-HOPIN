@@ -1,0 +1,101 @@
+{
+    "operation": "MTP ADDITION",
+    "type": "MTP", 
+    "tapeCount": 2,
+    "symbols": ["0","1","+","-","#","X"],
+    "blankSymbol": "B",
+    "startState": "Q0",
+    "acceptStates": ["Q2"],
+    "states": [
+        {
+            "name": "Q0",
+            "transitions": [
+                {
+                    "read": "0B",
+                    "write": "00",
+                    "direction": "RR",
+                    "nextState": "Q0"
+                },
+                {
+                    "read": "1B",
+                    "write": "11",
+                    "direction": "RR",
+                    "nextState": "Q0"
+                },
+                {
+                    "read": "CB",
+                    "write": "CB",
+                    "direction": "RL",
+                    "nextState": "Q1"
+                }
+            ]
+        },
+        {
+            "name": "Q1",
+            "transitions": [
+                {
+                    "read": "00",
+                    "write": "00",
+                    "direction": "SR",
+                    "nextState": "Q1"
+                },
+                {
+                    "read": "11",
+                    "write": "11",
+                    "direction": "SR",
+                    "nextState": "Q1"
+                },
+                {
+                    "read": "0B",
+                    "write": "00",
+                    "direction": "RR",
+                    "nextState": "Q1"
+                },
+                {
+                    "read": "1B",
+                    "write": "11",
+                    "direction": "RR",
+                    "nextState": "Q1"
+                },
+                {
+                    "read": "01",
+                    "write": "0B",
+                    "direction": "RL",
+                    "nextState": "Q1"
+                },
+                {
+                    "read": "10",
+                    "write": "1B",
+                    "direction": "RL",
+                    "nextState": "Q1"
+                },
+                {
+                    "read": "B1",
+                    "write": "B1",
+                    "direction": "RR",
+                    "nextState": "Q2"
+                },
+                {
+                    "read": "B0",
+                    "write": "B0",
+                    "direction": "RR",
+                    "nextState": "Q2"
+                },
+                {
+                    "read": "BB",
+                    "write": "0BB0",
+                    "direction": "RR",
+                    "nextState": "Q2"
+                }
+            ]
+        },
+        {
+            "name": "Q2",
+            "transitions": [
+                
+              
+            ]
+        }               
+    ]
+}
+
