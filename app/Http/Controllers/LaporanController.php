@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Laporan;
 use Illuminate\Http\Request;
 
 class LaporanController extends Controller
@@ -13,7 +14,11 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        return view('laporan.index');
+        $laporans = Laporan::with('user')->get();
+
+        return view('laporan.show', [
+            'laporans' => $laporans
+        ]);
     }
 
     /**
@@ -23,8 +28,7 @@ class LaporanController extends Controller
      */
     public function create()
     {
-        return view('laporan.create');
-        
+        return view('laporan.show');
     }
 
     /**
@@ -35,39 +39,43 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Laporan  $laporan
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Laporan $laporan)
     {
-        //
+        return view('laporan.show', [
+            'laporan' => $laporan
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Laporan  $laporan
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Laporan $laporan)
     {
-        //
+        return view('laporan.show', [
+            'laporan' => $laporan
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Laporan  $laporan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Laporan $laporan)
     {
         //
     }
@@ -75,10 +83,10 @@ class LaporanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Laporan  $laporan
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Laporan $laporan)
     {
         //
     }

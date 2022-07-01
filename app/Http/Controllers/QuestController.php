@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Quest;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class QuestController extends Controller
@@ -14,7 +15,11 @@ class QuestController extends Controller
      */
     public function index()
     {
-        //
+        $quests = Quest::with('user')->get();
+
+        return view('quest.index', [
+            'quests' => $quests
+        ]);
     }
 
     /**
@@ -24,7 +29,8 @@ class QuestController extends Controller
      */
     public function create()
     {
-        //
+        return view('quest.create');
+        
     }
 
     /**
@@ -46,7 +52,10 @@ class QuestController extends Controller
      */
     public function show(Quest $quest)
     {
-        //
+        return view('quest.show', [
+            'quest' => $quest
+        ]);
+        
     }
 
     /**
@@ -57,7 +66,10 @@ class QuestController extends Controller
      */
     public function edit(Quest $quest)
     {
-        //
+        return view('quest.edit', [
+            'quest' => $quest
+        ]);
+        
     }
 
     /**
@@ -80,6 +92,6 @@ class QuestController extends Controller
      */
     public function destroy(Quest $quest)
     {
-        //
+        
     }
 }

@@ -9,6 +9,9 @@ class Rank extends Model
 {
     use HasFactory;
 
+    protected $guarded = ["id"];
+
+
     public static function getRank($qmr){
         $currentRankID = 0;
         foreach(Rank::all() as $rank){

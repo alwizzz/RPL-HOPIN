@@ -9,5 +9,9 @@ class User extends Model
 {
     use HasFactory;
 
-    protected $guarder = ["id"];
+    protected $guarded = ["id"];
+
+    public function rank(){
+        return $this->belongsTo(Rank::class);
+    }
 }
