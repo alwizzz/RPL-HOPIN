@@ -10,24 +10,32 @@
             <div class="card-body d-flex flex-row">
                 <div class="col-4">
                     <div class="row">
-                    <img src="https://source.unsplash.com/400x300/?accident" class="img-thumbnail" 
-                        alt="quest-img" style="width:400px; height:300px">
+                        <div class="col-12 my-2">
+                            <img src="https://source.unsplash.com/400x300/?accident" class="img-thumbnail" 
+                            alt="quest-img" style="width:400px; height:300px">
+                        </div>
+                        <div class="col-12">
+                            <img src="https://source.unsplash.com/400x300/?accident" class="img-thumbnail" 
+                            alt="quest-img" style="width:400px; height:300px">
+                        </div>
                     </div>
                 </div>
                 <div class="">
                     <p class="card-text mx-3">Desciption: {{ $laporan->description }}</p>
-                    <h5 class="card-text mx-3"><i class="fa-solid fa-user"></i> MelawaX</h5>
-                    <h5 class="card-text mx-3"><i class="fa-solid fa-location-dot"></i> {{ $laporan->location }}</h5>
-                </div>
+                    <div class="align-items-right">
+                        <h5 class="card-text mx-3"><i class="fa-solid fa-user"></i> MelawaX</h5>
+                        <h5 class="card-text mx-3"><i class="fa-solid fa-location-dot"></i> {{ $laporan->location }}</h5>
+                    </div>
+                    </div>
             </div>
             <hr>
-            <h3 class="card-text mx-3 fw-bold">Objective</h3>
-            <p class="card-text mx-3">Excerpt: {{ substr($laporan->description, 0, 80) }}</p>
-    
-            <hr>
-            <h3 class="card-text mx-3 fw-bold">Rewards</h3>
-            <p class="card-text mx-3">Reward Item: {{ $laporan->reward_items }}</p>
-            <p class="card-text mx-3">Reward EXP: {{ $laporan->reward_exp }}</p>
+            <div class="col-12 mt-3 mb-5 d-flex justify-content-center">
+                <a class="btn btn-lg ml-5 fw-bold" style="background-color: white; width: 100%; height: 50px;" href="#" role="button">
+                    <p style="color: #95D1CC">
+                        BUAT LAPORAN
+                    </p> 
+                </a>
+            </div>
         </div>
     </div>
 
