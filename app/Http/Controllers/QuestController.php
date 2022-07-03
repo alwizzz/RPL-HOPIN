@@ -18,7 +18,8 @@ class QuestController extends Controller
         $quests = Quest::with('user')->paginate(5);
 
         return view('quest.index', [
-            'quests' => $quests
+            'quests' => $quests,
+            'jenis' => 'Quest'
         ]);
     }
 

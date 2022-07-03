@@ -1,6 +1,10 @@
 @extends('layouts.mainlayout')
 
 @section('content')
+
+
+
+
 <div class="item" style="background-image: linear-gradient(#57ACB3, white)">
     <div class="container">
         <div class="row align-items-center">
@@ -29,6 +33,8 @@
                         <p class="card-text"><i class="fa-solid fa-user"></i> MelawaX</p>
                         <p class="card-text"><i class="fa-solid fa-location-dot"></i> {{ $quest->location }}</p>
                         <a class="btn btn-primary" href="/quest/{{ $quest->id }}">Detail Quest</a>
+                        <button type="button" class="btn btn-info" 
+                            data-toggle="modal" data-target="#exampleModal">Buat {{ $jenis }}</button>
                     </div>
                 </div>
             </div>
@@ -36,9 +42,6 @@
                 <div class="card-body text-center">
                     <h4 class="card-text">Reward</h4>
                     <h5 class="card-text">Rp20.000</h5>
-                    {{-- <p class="card-text"><i class="fa-solid fa-user"></i> MelawaX</p>
-                    <p class="card-text"><i class="fa-solid fa-location-dot"></i> Solo</p>
-                    <a class="btn btn-primary" href="#">Terima Quest</a> --}}
                 </div>
             </div>
         </div>
@@ -46,8 +49,11 @@
     <div class="d-flex justify-content-center">
         {{ $quests->links() }}
     </div>
+    
 </div>
 </div>
 </div>
 
+
+@include('partials.modal_create')
 @endsection

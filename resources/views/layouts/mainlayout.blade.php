@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+
     
+
     <title>HOPIN</title>
 </head>
 <body>
@@ -27,18 +31,18 @@
             <div class="collapse navbar-collapse fw-bold" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item @@about__active mx-5 hover">
-                        <a class="nav-link text-light" href="/laporan"><h5>Laporan</h5></a>
+                        <a class="nav-link text-light" href="/registrasi"><h5>Laporan</h5></a>
                     </li>
                     <li class="nav-item @@services__active mx-5">
-                        <a class="nav-link text-light" href="/quest"><h5> Quest</h5></a>
+                        <a class="nav-link text-light" href="/transaksi"><h5> Quest</h5></a>
                     </li>
                     <li class="nav-item @@contact__active mx-5">
-                        <a class="nav-link text-light" href="#"><h5>Darurat</h5></a>
+                        <a class="nav-link text-light" href="/mutasi"><h5>Darurat</h5></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-1">
                     <li class="nav-item active">
-                        <a class="nav-link text-light mr-2" href="#"><h5>Logout</h5><span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/admindashboard">Logout<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
