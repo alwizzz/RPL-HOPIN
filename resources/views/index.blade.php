@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item @@about__active mx-5">
-                        <a class="nav-link" href="/registrasi">Laporan</a>
+                        <a class="nav-link" href="../laporan/index">Laporan</a>
                     </li>
                     <li class="nav-item @@services__active mx-5">
                         <a class="nav-link" href="/transaksi">Quest</a>
@@ -41,20 +41,22 @@
             </div>
         </nav>
     </header>
-    <img src="assets/images/banner1.png" class="img-fluid" alt="Responsive image">
+    @yield('content')
+    <footer>
+
+    </footer>
+    {{-- <img src="assets/images/banner1.png" class="img-fluid" alt="Responsive image">
         <div class="item" style="background-image: linear-gradient(#57ACB3, white)">
             <li>
                 <div class="container">
                     <div class="row">
                         <div class="col-6">   
-                            <h1 class="text-light">HOPIN</h1> 
-                            <h1>HOPIN</h1> 
-                            <h1>HOPIN</h1> 
+                            
                         </div> 
                     </div>
                 </div>
             </li>
-        </div>
+        </div> --}}
 
 
 
