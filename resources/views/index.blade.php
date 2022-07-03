@@ -5,15 +5,15 @@
         <div class="item" style="background-image: linear-gradient(#57ACB3, white)">
             <li>
                 <div class="container">
-                    <div class="row mt-5">
-                        <div class="col-6">   
+                    <div class="row my-5 align-items-center">
+                        <div class="col-5">   
                             <h1 class="text-light fw-bold" style="font-size: 65px">HOPIN'</h1>
-                            <h5 class="text-ternary  fw-bold">Help Other People in Needs</h5>
-                            <p>Hopins membantu Anda menyebarkan manfaat kepada orang lain di sekitar Anda</p>
+                            <h5 class="text-ternary  fw-bold" style="font-size: 30px;">Help Other People in Needs</h5>
+                            <p style="font-size: 20px">Hopins membantu Anda menyebarkan manfaat kepada orang lain di sekitar Anda</p>
                         </div> 
-                        <div class="col-6">
-                            <a class="btn btn-primary btn-lg" style="width: 300px; height: 100px;" href="#" role="button">Masuk</a>
-                            <a class="btn btn-primary" href="#" role="button">Daftar</a>
+                        <div class="col-4 offset-2">
+                            <a class="btn btn-lg " style="background-color: #112B3C ;width: 200px; height: 75px;" href="#" role="button"><h4 class="text-light">Masuk</h4> </a>
+                            <a class="btn btn-lg " style="background-color: #112B3C ;width: 200px; height: 75px;" href="#" role="button"><h4 class="text-light">Daftar</h4> </a>
                         </div> 
                     </div>
                 </div>
