@@ -30,9 +30,9 @@
             </div>
             <hr>
             <div class="col-12 mt-3 mb-5 d-flex justify-content-center">
-                <a class="btn btn-lg ml-5 fw-bold" style="background-color: white; width: 100%; height: 50px;" href="#" role="button">
+                <a class="btn btn-lg ml-5 fw-bold" style="background-color: white; width: 100%; height: 50px;" href="/laporan" role="button">
                     <p style="color: #95D1CC">
-                        BUAT LAPORAN
+                        KEMBALI KE BERANDA
                     </p> 
                 </a>
             </div>

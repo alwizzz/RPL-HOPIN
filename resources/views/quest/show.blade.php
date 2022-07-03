@@ -23,7 +23,17 @@
             <h3 class="card-text mx-3 fw-bold">Rewards</h3>
             <p class="card-text mx-3">Reward Item: {{ $quest->reward_items }}</p>
             <p class="card-text mx-3">Reward EXP: {{ $quest->reward_exp }}</p>
+
+            <hr>
+            <div class="col-12 mt-3 d-flex justify-content-center">
+                <a class="btn btn-lg ml-5 fw-bold" style="background-color: white; width: 100%; height: 50px;" href="/quest" role="button">
+                    <p style="color: #95D1CC">
+                        KEMBALI KE BERANDA
+                    </p> 
+                </a>
+            </div>
         </div>
+        
     </div>
 
 </div>

@@ -32,9 +32,7 @@
                         <h5 class="card-text">{{ substr($quest->description, 0, 80) }}</h5>
                         <p class="card-text"><i class="fa-solid fa-user"></i> MelawaX</p>
                         <p class="card-text"><i class="fa-solid fa-location-dot"></i> {{ $quest->location }}</p>
-                        <a class="btn btn-primary" href="/quest/{{ $quest->id }}">Detail Quest</a>
-                        <button type="button" class="btn btn-info" 
-                            data-toggle="modal" data-target="#exampleModal">Buat {{ $jenis }}</button>
+                        <a class="btn text-light" style="background-color: #57ACB3" href="/quest/{{ $quest->id }}">Detail Quest</a>
                     </div>
                 </div>
             </div>
