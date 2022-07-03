@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Document</title>
 </head>
@@ -42,22 +43,11 @@
         </nav>
     </header>
     <img src="../assets/images/banner1.png" class="img-fluid" alt="Responsive image">
-        <div class="item" style="background-image: linear-gradient(#57ACB3, white)">
-            <li>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6">
-                            <h1 class="text-light fw-bold">HOPIN</h1>
-                            
-                        </div> 
-                    </div>
-                </div>
-            </li>
-        </div>
+    @yield('content')
     <footer>
         <div class="container">
             <div class="row">
-                tes
+                
             </div>
         </div>
     </footer>
