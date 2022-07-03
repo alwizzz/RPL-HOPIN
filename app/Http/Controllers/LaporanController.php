@@ -17,7 +17,8 @@ class LaporanController extends Controller
         $laporans = Laporan::with('user')->paginate(5);
 
         return view('laporan/index', [
-            'laporans' => $laporans
+            'laporans' => $laporans,
+            'jenis' => 'Laporan'
         ]);
     }
 
