@@ -24,11 +24,11 @@
                         alt="Card image cap" style="width: 325px; height: 210px">
                     </div>
                     <div class="col-6 card-body my-auto">
-                        <h4 class="card-text">Title: {{ $quest->title }}</h4>
-                        <h5 class="card-text">Excerpt: {{ substr($quest->description, 0, 80) }}</h5>
+                        <h4 class="card-text">{{ $quest->title }}</h4>
+                        <h5 class="card-text">{{ substr($quest->description, 0, 80) }}</h5>
                         <p class="card-text"><i class="fa-solid fa-user"></i> MelawaX</p>
                         <p class="card-text"><i class="fa-solid fa-location-dot"></i> {{ $quest->location }}</p>
-                        <a class="btn btn-primary" href="#">Terima Quest</a>
+                        <a class="btn btn-primary" href="/quest/{{ $quest->id }}">Detail Quest</a>
                     </div>
                 </div>
             </div>

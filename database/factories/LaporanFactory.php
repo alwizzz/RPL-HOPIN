@@ -17,9 +17,17 @@ class LaporanFactory extends Factory
      */
     public function definition()
     {
+        $title = $this->faker->randomElement([
+            'Pohon Tumbang',
+            'Kecelakaan Becak',
+            'Serangan Ular',
+            '6 Buronan Pemerintah',
+            'Narapidana  Kabur',
+            'Ormas Grebek Holytight'
+        ]);
         return [
             'user_id' => $this->faker->numberBetween(1, User::all()->count()),
-            'title' => $this->faker->sentence,
+            'title' => $title,
             'description' => $this->faker->paragraphs($this->faker->numberBetween(2, 5), true),
             'images' => 'blank',
             'urgency_type' => $this->faker->randomElement(['Genting', 'Tidak genting']),

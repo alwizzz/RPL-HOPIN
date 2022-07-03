@@ -14,9 +14,9 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        $laporans = Laporan::with('user')->get();
+        $laporans = Laporan::with('user')->paginate(5);
 
-        return view('laporan.show', [
+        return view('laporan/index', [
             'laporans' => $laporans
         ]);
     }

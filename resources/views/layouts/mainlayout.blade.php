@@ -27,18 +27,18 @@
             <div class="collapse navbar-collapse fw-bold" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item @@about__active mx-5 hover">
-                        <a class="nav-link text-light" href="/registrasi"><h5>Laporan</h5></a>
+                        <a class="nav-link text-light" href="/laporan"><h5>Laporan</h5></a>
                     </li>
                     <li class="nav-item @@services__active mx-5">
-                        <a class="nav-link text-light" href="/transaksi"><h5> Quest</h5></a>
+                        <a class="nav-link text-light" href="/quest"><h5> Quest</h5></a>
                     </li>
                     <li class="nav-item @@contact__active mx-5">
-                        <a class="nav-link text-light" href="/mutasi"><h5>Darurat</h5></a>
+                        <a class="nav-link text-light" href="#"><h5>Darurat</h5></a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-1">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/admindashboard">Logout<span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-light mr-2" href="#"><h5>Logout</h5><span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
