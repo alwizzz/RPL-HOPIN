@@ -20,8 +20,11 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/layouts/mainlayout', function () {
+    return view('layouts/mainlayout');
+});
+
 //tes
 
 Route::resource('/quest', QuestController::class);
 Route::resource('/laporan', LaporanController::class);
-
