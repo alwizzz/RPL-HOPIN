@@ -17,9 +17,17 @@ class QuestFactory extends Factory
      */
     public function definition()
     {
+        $title = $this->faker->randomElement([
+            'Bantu Membersihkan Halaman',
+            'Dibutuhkan pemain figuran',
+            'Dicari mini figure hilang',
+            'Membantu menanam padi',
+            'Memberi makan komodo',
+            'Menguras septic tank'
+        ]);
         return [
             'user_id' => $this->faker->numberBetween(1, User::all()->count()),
-            'title' => $this->faker->sentence,
+            'title' => $title,
             'description' => $this->faker->paragraphs($this->faker->numberBetween(2, 5), true),
             'images' => 'blank',
             'reward_items' => $this->faker->randomElement(['Uang', 'Barang', 'Uang & Barang']),
