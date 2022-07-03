@@ -15,7 +15,7 @@ class QuestController extends Controller
      */
     public function index()
     {
-        $quests = Quest::with('user')->get();
+        $quests = Quest::with('user')->paginate(5);
 
         return view('quest.index', [
             'quests' => $quests
