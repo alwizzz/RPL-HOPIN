@@ -3,8 +3,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Buat {{ $jenis }}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
           </button>
         </div>
         <div class="modal-body">
@@ -15,12 +15,12 @@
             </div>
             <div class="form-group">
               <label for="message-text" class="col-form-label">Deskripsi:</label>
-              <textarea class="form-control" id="message-text"></textarea>
+              <textarea class="form-control" id="message-text" rows="10"></textarea>
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
           <button type="button" class="btn btn-primary">Buat</button>
         </div>
       </div>
@@ -41,9 +41,9 @@
         var modalTitle = exampleModal.querySelector('.modal-title');
         var modalBodyInput = exampleModal.querySelector('.modal-body input');
 
-        modalTitle.textContent = 'New message to ' + recipient;
-        modalBodyInput.value = recipient;
+        // modalTitle.textContent = 'New message to ' + recipient;
+        // modalBodyInput.value = recipient;
 
-        console.log("woy");
+        // console.log("woy");
     })
 </script>

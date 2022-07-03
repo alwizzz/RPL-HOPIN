@@ -14,9 +14,15 @@
             </a>
         </div>
         <div class="col-12 mt-3 mb-5 d-flex justify-content-center">
-            <a class="btn btn-lg ml-5 text-light fw-bold" style="background-color: #B4ECE7 ;width: 200px; height: 50px;" href="#" role="button">
+            {{-- <a class="btn btn-lg ml-5 text-light fw-bold" style="background-color: #B4ECE7 ;width: 200px; height: 50px;" href="#" role="button">
+                TAMBAH QUEST
+            </a> --}}
+            <a class="btn btn-lg ml-5 text-light fw-bold" style="background-color: #B4ECE7 ;width: 200px; height: 50px;" href="#" 
+                role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 TAMBAH QUEST
             </a>
+            {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" 
+                data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button> --}}
         </div>
 
         @foreach($quests as $quest)

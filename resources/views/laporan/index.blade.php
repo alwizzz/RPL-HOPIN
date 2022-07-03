@@ -10,7 +10,11 @@
             </a>
         </div>
         <div class="col-12 mt-3 mb-5 d-flex justify-content-center">
-            <a class="btn btn-lg ml-5 text-light fw-bold" style="background-color: #B4ECE7 ;width: 200px; height: 50px;" href="#" role="button">
+            {{-- <a class="btn btn-lg ml-5 text-light fw-bold" style="background-color: #B4ECE7 ;width: 200px; height: 50px;" href="#" role="button">
+                BUAT LAPORAN
+            </a> --}}
+            <a class="btn btn-lg ml-5 text-light fw-bold" style="background-color: #B4ECE7 ;width: 200px; height: 50px;" href="#" 
+                role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 BUAT LAPORAN
             </a>
         </div>
@@ -42,5 +46,7 @@
 </div>
 </div>
 </div>
+
+@include('partials.modal_create')
 
 @endsection
