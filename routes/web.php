@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\QuestController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DaruratController;
 
 
 /*
@@ -42,3 +43,9 @@ Route::post('/logout', [UserController::class, 'logout'])
     
 Route::get('/profile', [UserController::class, 'profile'])
     ->middleware('auth');
+
+
+Route::get('/darurat', [DaruratController::class, 'index']);
+Route::get('/darurat/polisi', [DaruratController::class, 'polisi']);
+Route::get('/darurat/igd', [DaruratController::class, 'igd']);
+Route::get('/darurat/damkar', [DaruratController::class, 'damkar']);
