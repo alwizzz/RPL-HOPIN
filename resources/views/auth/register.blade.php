@@ -1,4 +1,4 @@
-@extends('layouts.mainlayout')
+@extends('layouts.mainlayout_nobanner')
 
 @section('content')
 <main class="w-100 m-auto d-flex justify-content-center mt-5">

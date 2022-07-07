@@ -1,5 +1,5 @@
-@extends('layouts.mainlayout')
-
+@extends('layouts.mainlayout_nobanner')
+ 
 @section('content')
 
   @if(session()->has('register_success'))
