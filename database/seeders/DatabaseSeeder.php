@@ -49,7 +49,7 @@ class DatabaseSeeder extends Seeder
         $this->createUser("Joseph Felix Damarta", 'Extra20Percent', 'jojoseph@email.com', "085155276769", 75400, 12000);
         $this->createUser('Muhammad Alwiza Ansyar', 'WeDay', 'alwiza21@gmail.com', "089638975086", 32500 , 4200);
         $this->createUser('Kristian Budi Pradana Putra', 'matildaa', 'iankrstn.kbpp@gmail.com', "085546998840", 4200 , 300);
-        $this->createUser('Mohammad Farrell Naufal Ramadhani', 'MelawaX', 'farnoov@gmail.com', "087734614227", 69400, 3400);
+        $this->createUser('Farrell Naufal', 'MelawaX', 'farnoov@gmail.com', "087734614227", 69400, 3400);
     }
 
     public function run()

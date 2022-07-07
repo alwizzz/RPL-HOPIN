@@ -1,8 +1,10 @@
 @extends('layouts.mainlayout')
 
 @section('content')
+<div class="item" style="background-image: linear-gradient( white, #57ACB3)">
+
 <div class="profile-wrapper d-flex justify-content-center">
-    <div class="p-5 m-5 d-flex flex-column justify-content-center" style="width:90%; height: auto; background-color:#42A1A5">
+    <div class="p-5 m-5 d-flex flex-column justify-content-center rounded-4" style="width:90%; height: auto; background-color:#42A1A5">
         <div class="row">
             <div class="col-3 d-flex justify-content-between">
                 <div class="profile-rank-image" >   
@@ -16,32 +18,34 @@
             </div>
             
         </div>
-
-        <div class="d-flex justify-content-center mt-5" style="width:100%; margin-bottom: 15px; background-color:aqua" >
-            <div class="profile-name d-flex flex-column align-items-center">
-                <h3>{{ $user->nama_lengkap }}</h3>
-                <h5>{{ $user->username }}</h5>
+        
+        <div class="col-4 offset-4 d-flex justify-content-center mt-5 rounded-4 border-white" style="background-color:#B4ECE7; border-style: solid;"  >
+            <div class="profile-name d-flex flex-column align-items-center mx-1 my-2 " style="color: #112B3C;">
+                <h2>{{ $user->nama_lengkap }}</h2>
+                <h5> @ {{ $user->username }}</h5>
             </div>
         </div>
         
-        <div class="d-flex justify-content-center" style="width:100%; margin-bottom: 15px; background-color:aqua" >
-            <div class="profile-level d-flex flex-column align-items-center">
-                <label>Level</label>
-                <div class="profile-level-display p-3" style="background-color: aquamarine">
+        <div class="col-6 offset-3 d-flex justify-content-center my-3" >
+            
+            <div class=" col-1 profile-level  align-items-center mx-3 fw-bold text-center" >
+                <label style="color: white">Level</label>
+                <div class="profile-level-display p-3 rounded-3 border-white" style="background-color:#B4ECE7; border-style: solid;" >
                     {{ $user->level }}
                 </div>
             </div>
-            
-            <div class="profile-xp d-flex flex-column align-items-center">
-                <label>XP</label>
-                <div class="profile-xp-display p-3" style="background-color: aquamarine">
-                    {{ $user->total_exp }}
+
+            <div class=" col-6 profile-xp   align-items-center fw-bold">
+                <label style="color: white">XP</label>
+                <div class="col-11 progress border-white" style="height: 60px; border-style: solid; background-color:#B4ECE7;"> 
+                    <div class="progress-bar bg-success progress-height bg-green border " role="progressbar" style=" width:  {{ ($user->total_exp % 1000)/10 }}%" aria-valuenow=" {{ $user->total_exp % 1000}}" aria-valuemin="0" aria-valuemax="1000"></div>
                 </div>
             </div>
         </div>
         
-        <div class="d-flex justify-content-center" style="width:100%; margin-bottom: 15px; background-color:aqua" >
-            <div class="profile-info p-4 d-flex flex-column" style="width:500px; height: auto; background-color:aquamarine">
+        <div class="col-6 offset-4 justify-content-center" style="" >
+            
+            <div class="profile-info p-4 d-flex flex-column rounded-3 border-white" style="width:500px; height: auto; background-color:#B4ECE7; border-style: solid;">
                 <div class="profile-body d-flex  align-items-center">
                     <label for="">Email</label>
                     <h4>{{ $user->email }}</h4>
@@ -62,5 +66,5 @@
     </div>    
     
 </div>
-
+</div>
 @endsection

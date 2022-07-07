@@ -48,7 +48,7 @@
             </div> --}}
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto justify-content-center" style="padding-left: 280px;">
                         <ul class="nav justify-content-center">
                             <li class="nav-item">
