@@ -13,7 +13,7 @@
             </div>
             <div class="col-5 offset-1  d-flex mx-auto" style="padding-left:50px;">
                 <div class="profile-circle-image " >
-                    <img src="../assets/images/default_profile_image.jpg" style="width:150px; height:150px" >
+                    <img src="../assets/images/default_profile_image.png" style="width:170px; height:170px" >
                 </div>
             </div>
             
@@ -45,22 +45,36 @@
         
         <div class="col-6 offset-4 justify-content-center" style="" >
             
-            <div class="profile-info p-4 d-flex flex-column rounded-3 border-white" style="width:500px; height: auto; background-color:#B4ECE7; border-style: solid;">
-                <div class="profile-body d-flex  align-items-center">
-                    <label for="">Email</label>
+            <div class="profile-info p-4 d-flex  rounded-3 border-white" style="width:500px; height: auto; background-color:#B4ECE7; border-style: solid;">
+            <div class="row">
+                <div class="col-3">
+                    <h4 for=""> Email</h4>
+                </div>
+                <div class= "col-8 profile-body  align-items-center">
                     <h4>{{ $user->email }}</h4>
                 </div>
-                
-                <div class="profile-body d-flex  align-items-center">
-                    <label for="">Phone</label>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <h4 for=""> Phone</h4>
+                </div>
+                <div class= "col-8 profile-body  align-items-center">
                     <h4>{{ $user->no_hp }}</h4>
                 </div>
-                
-                <div class="profile-body d-flex  align-items-center">
-                    <label for="">Location</label>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <h4 for=""> Lokasi</h4>
+                </div>
+                <div class= "col-8 profile-body  align-items-center">
                     <h4>{{ $user->location }}</h4>
                 </div>
             </div>
+            </div>
+                
+                
+            
+        </div>
         </div>
 
     </div>    

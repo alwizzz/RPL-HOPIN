@@ -13,7 +13,7 @@
             {{-- <a class="btn btn-lg ml-5 text-light fw-bold" style="background-color: #B4ECE7 ;width: 200px; height: 50px;" href="#" role="button">
                 BUAT LAPORAN
             </a> --}}
-            <a class="btn btn-lg ml-5 text-light fw-bold" style="background-color: #B4ECE7; width: 200px; height: 50px;" href="#" 
+            <a class="btn btn-lg ml-5 text-light fw-bold" style="background-color: #57ACB3; width: 200px; height: 50px;" href="#" 
                 role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 BUAT LAPORAN
             </a>
