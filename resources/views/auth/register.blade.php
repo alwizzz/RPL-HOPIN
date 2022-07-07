@@ -1,6 +1,7 @@
 @extends('layouts.mainlayout_nobanner')
 
 @section('content')
+<div class="items " style="background-image: linear-gradient( white, #57ACB3)">
 <main class="w-100 m-auto d-flex justify-content-center mt-5">
     <form action="/register" method="post">
       @csrf
@@ -94,8 +95,9 @@
         </div>
       @enderror
   
-      <button class="w-100 btn btn-lg btn-primary mt-2" type="submit">Register</button>
+      <button class="w-100 btn btn-lg text-white mt-2" style="background-color: #112B3C" type="submit">Register</button>
       <p class="text-muted px-5">Already have account? <a class="text-decoration-none" href="/login">Login</a></p>
     </form>
   </main>
+  </div>
 @endsection
