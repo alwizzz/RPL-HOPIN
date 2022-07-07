@@ -39,3 +39,6 @@ Route::post('/register', [UserController::class, 'store']);
 
 Route::post('/logout', [UserController::class, 'logout'])
     ->middleware('auth');
+    
+Route::get('/profile', [UserController::class, 'profile'])
+    ->middleware('auth');

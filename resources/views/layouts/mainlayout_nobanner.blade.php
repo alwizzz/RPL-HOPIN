@@ -75,7 +75,7 @@
     
                 @auth
                 <div class="navbar-nav ms-auto mt-2 mx-3">
-                    <a class="nav-link text-light" href="#">
+                    <a class="nav-link text-light" href="/profile">
                         <h5>
                             <i class="fa-solid fa-user"></i>
                             {{ auth()->user()->username }} 
