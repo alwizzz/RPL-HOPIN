@@ -49,7 +49,7 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav d-flex">
+                    <div class="navbar-nav mx-auto justify-content-center" style="padding-left: 280px;">
                         <ul class="nav justify-content-center">
                             <li class="nav-item">
                                 <a class="nav-link text-light mx-4 {{ ($title == 'Laporan') ? 'active':'' }}" href="/laporan"><h5>Laporan</h5></a>
@@ -94,6 +94,7 @@
                     {{-- <p></p> --}}
                 </div>
                 @endauth
+                </div>
             </div>
         </nav>
     </header>
