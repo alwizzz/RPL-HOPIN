@@ -10,7 +10,7 @@
             <div class="card-body d-flex flex-row">
                 <img src="../assets/images/damkar_image.png" class="img-thumbnail" alt="quest-img" style="width:400px; height:300px">
                 <div class="">
-                    <p class="card-text mx-3">{{ $desc }}</p>
+                    <h5 class="card-text mx-3">{{ $desc }}</h5>
                     <h5 class="card-text mx-3"><i class="fa-solid fa-location-dot"></i> {{ $location }}</h5>
                     <h5 class="card-text mx-3"><i class="fa-solid fa-clock"></i> {{ $buka_jam }}</h5>
                     <h5 class="card-text mx-3"><i class="fa-solid fa-phone"></i> {{ $telepon }}</h5>
