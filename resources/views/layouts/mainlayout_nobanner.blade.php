@@ -59,7 +59,7 @@
                             <a class="nav-link text-light mx-4 {{ ($title == 'Quest') ? 'active':'' }}" href="/quest"><h5>Quest</h5></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light mx-4 {{ ($title == 'Darurat') ? 'active':'' }}" href="#"><h5>Darurat</h5></a>
+                            <a class="nav-link text-light mx-4 {{ ($title == 'Darurat') ? 'active':'' }}" href="/darurat"><h5>Darurat</h5></a>
                         </li>
                     </ul>
                 </div>
