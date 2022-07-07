@@ -19,7 +19,8 @@ class QuestController extends Controller
 
         return view('quest.index', [
             'quests' => $quests,
-            'jenis' => 'Quest'
+            'jenis' => 'Quest',
+            'title' => 'Quest'
         ]);
     }
 
@@ -54,7 +55,8 @@ class QuestController extends Controller
     public function show(Quest $quest)
     {
         return view('quest.show', [
-            'quest' => $quest
+            'quest' => $quest,
+            'title' => 'Quest'
         ]);
         
     }

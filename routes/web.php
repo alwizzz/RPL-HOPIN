@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\QuestController;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -16,9 +18,7 @@ use App\Http\Controllers\QuestController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [DashboardController::class, 'index']);
 
 Route::get('/layouts/mainlayout', function () {
     return view('layouts/mainlayout');
@@ -28,3 +28,14 @@ Route::get('/layouts/mainlayout', function () {
 
 Route::resource('/quest', QuestController::class);
 Route::resource('/laporan', LaporanController::class);
+
+Route::get('/login', [UserController::class, 'login'])->name('login')
+    ->middleware('guest');
+Route::post('/login', [UserController::class, 'authenticate'])
+    ->middleware('guest');
+
+Route::get('/register', [UserController::class, 'register']);
+Route::post('/register', [UserController::class, 'store']);
+
+Route::post('/logout', [UserController::class, 'logout'])
+    ->middleware('auth');

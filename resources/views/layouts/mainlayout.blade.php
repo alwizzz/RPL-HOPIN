@@ -28,7 +28,7 @@
                 <span class="navbar-toggler-icon fa icon-close fa-times"></span>
             </button>
 
-            <div class="collapse navbar-collapse fw-bold" id="navbarTogglerDemo02">
+            {{-- <div class="collapse navbar-collapse fw-bold" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item @@about__active mx-5 hover">
                         <a class="nav-link text-light" href="/laporan"><h5>Laporan</h5></a>
@@ -45,6 +45,46 @@
                         <a class="nav-link text-light" href="#"><h5> Logout </h5><span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
+            </div> --}}
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav d-flex justify-content-center">
+                    <a class="nav-link text-light {{ ($title == 'Laporan') ? 'active':'' }}" href="/laporan"><h5>Laporan</h5></a>
+                    <a class="nav-link text-light {{ ($title == 'Quest') ? 'active':'' }}" href="/quest"><h5>Quest</h5></a>
+                    <a class="nav-link text-light {{ ($title == 'Darurat') ? 'active':'' }}" href="#"><h5>Darurat</h5></a>
+                </div>
+    
+                @guest
+                <div class="navbar-nav ms-auto mx-3">
+                    <a class="nav-link text-light {{ ($title == 'Login') ? 'active':'' }}" href="/login">
+                        <h5>
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
+                        </h5>
+                    </a>
+                </div>
+                @endguest
+    
+                @auth
+                <div class="navbar-nav ms-auto mt-2 mx-3">
+                    <a class="nav-link text-light" href="#">
+                        <h5>
+                            <i class="fa-solid fa-user"></i>
+                            {{ auth()->user()->username }} 
+                        </h5>
+                    </a>
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button type="submit" class="nav-link text-light" style="background-color:transparent; border:none"
+                            onclick="return confirm('Are you sure you want to logout?')">
+                            <h5>
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                            </h5>
+                        </button>
+                    </form>
+                    
+                    {{-- <p></p> --}}
+                </div>
+                @endauth
             </div>
         </nav>
     </header>

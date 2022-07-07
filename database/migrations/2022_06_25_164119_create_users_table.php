@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nama_lengkap');
             $table->string('username');
             $table->string('email');
+            $table->string('no_hp');
             $table->string('password');
             $table->date('ttl');
             $table->string('alamat');

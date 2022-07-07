@@ -18,7 +18,8 @@ class LaporanController extends Controller
 
         return view('laporan/index', [
             'laporans' => $laporans,
-            'jenis' => 'Laporan'
+            'jenis' => 'Laporan',
+            'title' => 'Laporan'
         ]);
     }
 
@@ -52,7 +53,8 @@ class LaporanController extends Controller
     public function show(Laporan $laporan)
     {
         return view('laporan.show', [
-            'laporan' => $laporan
+            'laporan' => $laporan,
+            'title' => 'Laporan'
         ]);
     }
 

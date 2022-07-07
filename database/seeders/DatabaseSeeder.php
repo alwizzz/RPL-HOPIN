@@ -30,11 +30,12 @@ class DatabaseSeeder extends Seeder
         Rank::create(['name' => 'Malaikat', 'min_qmr' => 10000]);
     }
 
-    function createUser($nama_lengkap, $username, $email, $total_exp, $total_qmr){
+    function createUser($nama_lengkap, $username, $email, $no_hp, $total_exp, $total_qmr){
         User::create([
             'nama_lengkap' => $nama_lengkap,
             'username' => $username,
             'email' => $email,
+            'no_hp' => $no_hp,
             'password' => bcrypt("123456789"),
             'ttl' => "2000-10-10",
             'alamat' => 'Solo',
@@ -45,10 +46,10 @@ class DatabaseSeeder extends Seeder
         ]);
     }
     function generateUser(){
-        $this->createUser("Joseph Felix Damarta", 'Extra20Percent', 'jojoseph@email.com', 75400, 12000);
-        $this->createUser('Muhammad Alwiza Ansyar', 'WeDay', 'alwiza21@gmail.com', 32500 , 4200);
-        $this->createUser('Kristian Budi Pradana Putra', 'matildaa', 'iankrstn.kbpp@gmail.com', 4200 , 300);
-        $this->createUser('Mohammad Farrell Naufal Ramadhani', 'MelawaX', 'farnoov@gmail.com', 69400, 3400);
+        $this->createUser("Joseph Felix Damarta", 'Extra20Percent', 'jojoseph@email.com', "085155276769", 75400, 12000);
+        $this->createUser('Muhammad Alwiza Ansyar', 'WeDay', 'alwiza21@gmail.com', "089638975086", 32500 , 4200);
+        $this->createUser('Kristian Budi Pradana Putra', 'matildaa', 'iankrstn.kbpp@gmail.com', "085546998840", 4200 , 300);
+        $this->createUser('Mohammad Farrell Naufal Ramadhani', 'MelawaX', 'farnoov@gmail.com', "087734614227", 69400, 3400);
     }
 
     public function run()
