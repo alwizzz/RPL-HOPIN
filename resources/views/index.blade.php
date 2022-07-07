@@ -43,7 +43,7 @@
                                         <p class="card-text"><i class="fa-solid fa-location-dot mx-1"></i>{{ $laporan->location }}</p>
                                     </div>
                                     <div class="d-flex justify-content-center" style="margin-bottom: 20px">
-                                        <a href="/laporan/{{ $laporan->id }}" class="btn text-light" style="background-color: #57ACB; height: 50px;"  >Lihat Laporan</a>
+                                        <a href="/laporan/{{ $laporan->id }}" class="btn text-light fw-bold" style="background-color: #57ACB3; height: 40px;"  >Lihat Laporan</a>
 
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@
                                         <p class="card-text"><i class="fa-solid fa-location-dot mx-1"></i>{{ $quest->location }}</p>
                                     </div>
                                     <div class="d-flex justify-content-center" style="margin-bottom: 20px">
-                                        <a href="/quest/{{ $quest->id }}" class="btn text-light" style="background-color: #57ACB3; height: 50px;"  >Lihat quest</a>
+                                        <a href="/quest/{{ $quest->id }}" class="btn text-light fw-bold" style="background-color: #57ACB3; height: 40px;"  >Lihat quest</a>
             
                                     </div>
                                 </div>
