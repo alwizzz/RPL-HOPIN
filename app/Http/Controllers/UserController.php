@@ -69,4 +69,15 @@ class UserController extends Controller
 
         return redirect('/login')->with('register_success', 'Account has been registered! Please Login!');
     }
+
+
+    public function profile()
+    {
+        $user = Auth::user();
+        
+        return view('profile.index', [
+            'user' => $user,
+            'title' => 'Profile',
+        ]);
+    }
 }
