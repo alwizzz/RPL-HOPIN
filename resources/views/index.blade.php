@@ -11,10 +11,22 @@
                             <h5 class="text-ternary  fw-bold" style="font-size: 30px;">Help Other People in Needs</h5>
                             <p style="font-size: 20px">Hopins membantu Anda menyebarkan manfaat kepada orang lain di sekitar Anda</p>
                         </div> 
-                        <div class="col-4 offset-2">
-                            <a class="btn btn-lg " style="background-color: #112B3C ;width: 200px; height: 75px;" href="#" role="button"><h4 class="text-light">Masuk</h4> </a>
-                            <a class="btn btn-lg " style="background-color: #112B3C ;width: 200px; height: 75px;" href="#" role="button"><h4 class="text-light">Daftar</h4> </a>
-                        </div> 
+                        @auth
+                            <div class="col-4 offset-2">
+                                <a class="btn btn-lg " style="background-color: #112B3C ;width: 200px; height: 75px;" href="/laporan" 
+                                    role="button"><h5 class="text-light">Beranda Laporan</h5> </a>
+                                <a class="btn btn-lg " style="background-color: #112B3C ;width: 200px; height: 75px;" href="/quest" 
+                                    role="button"><h5 class="text-light">Beranda Quest</h5> </a>
+                            </div> 
+                        @else
+                            <div class="col-4 offset-2">
+                                <a class="btn btn-lg " style="background-color: #112B3C ;width: 200px; height: 75px;" href="/login" 
+                                    role="button"><h5 class="text-light">Masuk</h5> </a>
+                                <a class="btn btn-lg " style="background-color: #112B3C ;width: 200px; height: 75px;" href="/register" 
+                                    role="button"><h5 class="text-light">Daftar</h5> </a>
+                            </div> 
+                        @endauth
+
                     </div>
                 </div>
             </li>
