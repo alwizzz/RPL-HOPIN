@@ -6,7 +6,7 @@
         <div class="row align-items-center">
         <div class="col-12 mt-5 d-flex justify-content-center">
             <a class="navbar-brand" href="/index">
-                <span><img class="mx-auto" src="../assets/images/laporanicon.png" alt="" title="Your logo" style="height:200px;" /></span> 
+                <span><img class="mx-auto" src="../assets/images/laporanicon.png" alt="" title="Your logo" style="height:175px;" /></span> 
             </a>
         </div>
         <div class="col-12 mt-3 mb-5 d-flex justify-content-center">

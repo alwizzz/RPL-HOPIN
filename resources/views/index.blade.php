@@ -21,52 +21,74 @@
         </div>
 
         {{-- TOP 3 LAPORAN --}}
-        <div class="d-flex justify-content-center align-items-center my-5" style="width:100%; height:300px; background-color:antiquewhite">
-            <div class="laporan-header mx-3">
-                Laporan Logo
-                blablabla
-            </div>
-            <div class="laporan-wrapper d-flex">
-                @foreach($laporans as $laporan)
-                    <div class="card mx-3" style="width: 200px; height:275px">
-                        <img class="card-img-top" src="https://source.unsplash.com/200x150/?accident" style="height:100px">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $laporan->title }}</h5>
-                            <p class="card-text"><i class="fa-solid fa-location-dot mx-1"></i>{{ $laporan->location }}</p>
-                        </div>
-                        <div class="d-flex justify-content-center" style="margin-bottom: 20px">
-                            <a href="/laporan/{{ $laporan->id }}" class="btn btn-primary" style="width:150px">Lihat Laporan</a>
-
+        <div class="d-flex justify-content-center align-items-center my-5" style="width:100%; height:300px; background-color: #57ACB3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="laporan-header mx-3 justify-content-center my-auto">
+                            <a class=" d-flex mt-5 " style="padding-left: 50px;" href="/index">
+                                <span><img class="ml-5" src="../assets/images/laporanicon.png" alt="" title="Your logo" style="height:100px;" /></span> 
+                            </a>
+                            <p class="text-light text-center fw-bold">Cari tahu laporan di sekitar Anda</p>
+                            <a href="/laporan" ><p class="text-center text-light">Lihat Semua</p></a>
                         </div>
                     </div>
-                @endforeach
-                  
+                    <div class="col-9">
+                        <div class="laporan-wrapper d-flex">
+                            @foreach($laporans as $laporan)
+                                <div class="card mx-4" style="width: 200px; height:275px">
+                                    <img class="card-img-top" src="https://source.unsplash.com/200x150/?accident" style="height:100px">
+                                    <div class="card-body">
+                                        <h6 class="card-title fw-bold">{{ $laporan->title }}</h6>
+                                        <p class="card-text"><i class="fa-solid fa-location-dot mx-1"></i>{{ $laporan->location }}</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center" style="margin-bottom: 20px">
+                                        <a href="/laporan/{{ $laporan->id }}" class="btn text-light" style="background-color: #57ACB; height: 50px;"  >Lihat Laporan</a>
+
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         {{-- TOP 3 QUEST --}}
-        <div class="d-flex justify-content-center align-items-center my-5" style="width:100%; height:300px; background-color:antiquewhite">
-            <div class="laporan-header mx-3">
-                Quest Logo
-                blablabla
-            </div>
-            <div class="laporan-wrapper d-flex">
-                @foreach($quests as $quest)
-                    <div class="card mx-3" style="width: 200px; height:275px">
-                        <img class="card-img-top" src="https://source.unsplash.com/200x150/?accident" style="height:100px">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $quest->title }}</h5>
-                            <p class="card-text"><i class="fa-solid fa-location-dot mx-1"></i>{{ $quest->location }}</p>
-                        </div>
-                        <div class="d-flex justify-content-center" style="margin-bottom: 20px">
-                            <a href="/quest/{{ $quest->id }}" class="btn btn-primary" style="width:150px">Lihat Quest</a>
+        <div class="d-flex justify-content-center align-items-center my-5" style="width:100%; height:300px; background-color: #57ACB3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="laporan-header mx-3 justify-content-center my-auto">
+                            <a class="d-flex mt-5" style="padding-left: 70px;"  href="/index">
+                                <span><img class="mx-auto" src="../assets/images/questicon.png" alt="" title="Your logo" style="height:100px;" /></span> 
+                            </a>
 
+                            <p class="text-light text-center fw-bold">Cari tahu Quest di sekitar Anda</p>
+                            <a href="/quest" ><p class="text-center text-light">Lihat Semua</p></a>
                         </div>
                     </div>
-                @endforeach
-                  
+                    <div class="col-9">
+                        <div class="laporan-wrapper d-flex">
+                            @foreach($quests as $quest)
+                                <div class="card mx-4" style="width: 200px; height:275px">
+                                    <img class="card-img-top" src="https://source.unsplash.com/200x150/?accident" style="height:100px">
+                                    <div class="card-body">
+                                        <h6 class="card-title fw-bold">{{ $quest->title }}</h6>
+                                        <p class="card-text"><i class="fa-solid fa-location-dot mx-1"></i>{{ $quest->location }}</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center" style="margin-bottom: 20px">
+                                        <a href="/quest/{{ $quest->id }}" class="btn text-light" style="background-color: #57ACB3; height: 50px;"  >Lihat quest</a>
+            
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 @endsection
