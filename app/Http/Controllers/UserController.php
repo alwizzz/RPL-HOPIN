@@ -15,7 +15,7 @@ class UserController extends Controller
     }
     
     public function register(){
-        return view('auth.register'. [
+        return view('auth.register', [
             'title' => 'Register'
         ]);
     }
@@ -43,5 +43,30 @@ class UserController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/login');
+    }
+
+    public function store(Request $request)
+    {
+        $rules = [
+            'nama_lengkap' => 'required',
+            'ttl' => 'required',
+            'alamat' => 'required',
+            'no_hp' => 'required',
+            'username' => 'required|unique:users',
+            'email' => 'required|unique:users|email',
+            'password' => 'required',
+            'password2' => 'required|same:password',
+        ];
+
+        $validatedData = $request->validate($rules);
+        $validatedData['password'] = bcrypt($validatedData['password']); 
+        $validatedData['total_exp'] = 0; 
+        $validatedData['total_qmr'] = 0; 
+        $validatedData['level'] = 1; 
+        $validatedData['rank_id'] = 1; 
+        // dd($validatedData);
+        User::create($validatedData);
+
+        return redirect('/login')->with('register_success', 'Account has been registered! Please Login!');
     }
 }

@@ -11,7 +11,7 @@
         <input type="text" class="mb-3 form-control @error('nama_lengkap') is-invalid @enderror"
           name='nama_lengkap' value="{{ old('nama_lengkap') }}" autofocus>
       </div>
-      @error('name')
+      @error('nama_lengkap')
         <div class="text-danger">
             {{ $message }}
         </div>
@@ -85,7 +85,7 @@
 
       <div class="">
         <label for="floatingPassword">Repeat Password</label>
-        <input type="password2" class="mb-3 form-control @error('password2') is-invalid @enderror"  
+        <input type="password" class="mb-3 form-control @error('password2') is-invalid @enderror"  
           name="password2" value="{{ old('password2') }}">
       </div>
       @error('password2')
